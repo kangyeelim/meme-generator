@@ -1,0 +1,89 @@
+.App {
+  text-align: center;
+}
+
+body {
+  margin:0;
+}
+
+.App-header {
+  min-height: 1vmin;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(30px + 1vmin);
+  color: white;
+  padding: 1vmin 1rem;
+  background-image: linear-gradient(to right, Indigo, MediumPurple);
+}
+
+p.impact {
+  font-family: Impact, Charcoal, sans-serif;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.Trollface-Image {
+  width: calc(100px + 2vmin);
+  margin: 20px;
+}
+
+img.meme-img {
+  width: 200px;
+}
+
+img.editImg {
+  width: 500px;
+  border-width: 1px;
+  border-color: black;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+form.meme-form {
+  margin: 20px;
+}
+
+.meme {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.meme > img {
+    width: 100%;
+}
+
+.meme > h2 {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0;
+    padding: 0 5px;
+    font-family: impact, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+}
+
+/*.meme > .bottom {
+    bottom: 0;
+}
+
+.meme > .top {
+    top: 0;
+}*/
