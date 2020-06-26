@@ -41,18 +41,21 @@ class Gallery extends React.Component {
       return <img className="meme-img" key={data.id} src={data.url} onClick={() => {props.setImage(data.url); props.setTextBox(data.box_count)}}/>
     });
     return (
-      <InfiniteScroll
-      dataLength={this.state.memes.slice(0, this.state.indexOfLast).length} //This is important field to render the next data
-      next={this.fetchData}
-      hasMore={this.state.hasMore}
-      loader={<h4>Loading...</h4>}
-      endMessage={
-        <p style={{textAlign: 'center'}}>
-          <b>Yay! You have seen it all</b>
-        </p>
-      }>
-      {items}
-      </InfiniteScroll>
+      <div className="gallery-portion">
+        <h3 className="header">Choose Meme Image to Edit</h3>
+        <InfiniteScroll
+        dataLength={this.state.memes.slice(0, this.state.indexOfLast).length} //This is important field to render the next data
+        next={this.fetchData}
+        hasMore={this.state.hasMore}
+        loader={<h4>Loading...</h4>}
+        endMessage={
+          <p style={{textAlign: 'center'}}>
+            <b>Yay! You have seen it all</b>
+          </p>
+        }>
+        {items}
+        </InfiniteScroll>
+      </div>
     )
   }
 }
