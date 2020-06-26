@@ -32,7 +32,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <body>
+      <div>
         <Header/>
         <div className="App">
           <MemeGenerator
@@ -45,7 +45,7 @@ class App extends React.Component {
             setTextBox={this.setTextBox}
           />
         </div>
-      </body>
+      </div>
     );
   }
 }

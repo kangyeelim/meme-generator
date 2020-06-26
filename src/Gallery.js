@@ -23,7 +23,6 @@ class Gallery extends React.Component {
   }
 
   fetchData() {
-    console.log(this.state.memes.length);
     if (this.state.numOfMemes === this.state.indexOfLast - 1) {
       this.setState({hasMore:false});
     }

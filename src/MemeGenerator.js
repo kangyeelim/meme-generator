@@ -12,7 +12,7 @@ class MemeGenerator extends React.Component {
   handleChange(id, event) {
     const {value} = event.target
     var newTextInputs = this.state.textInputs.map((input) => {
-      if (input.id == id) {
+      if (input.id === id) {
         return {id:id, input:value}
       } else {
         return input
@@ -21,6 +21,12 @@ class MemeGenerator extends React.Component {
     this.setState({textInputs:newTextInputs})
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.textBoxes !== this.props.textBoxes) {
+      document.getElementById("meme-form").reset()
+      this.setState({textInputs:this.props.textBoxes})
+    }
+  }
 
   render() {
     const handleChange = this.handleChange;
@@ -42,11 +48,11 @@ class MemeGenerator extends React.Component {
     })
     return (
       <div>
-        <form className="meme-form">
+        <form className="meme-form" id="meme-form">
           {textBoxes}
         </form>
         <div className="meme">
-          <img className="editImg" src={this.props.imageUrl} alt="Meme Image"/>
+          <img className="editImg" src={this.props.imageUrl}/>
           {textInputs}
         </div>
       </div>
