@@ -9,6 +9,7 @@
     "bootstrap": "^4.5.0",
     "file-saver": "^2.0.2",
     "html2canvas": "^1.0.0-rc.5",
+    "html2canvas-proxy": "^1.0.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",

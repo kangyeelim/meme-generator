@@ -24,18 +24,15 @@ class MemeGenerator extends React.Component {
     this.setState({textInputs:newTextInputs})
   }
 
-  async downloadMeme() {
-    var FileSaver = require('file-saver');
+  downloadMeme() {
+    var FileSaver = require('file-saver')
     var node = document.getElementById("meme")
-    var width = document.getElementById("edit-img").width;
-    var height = document.getElementById("edit-img").height;
     console.log(node)
-    var canvas = await html2canvas(node, {allowTaint:true, backgroundColor:'#000000', width:width, height:height,x:0, y:0})
-    console.log(canvas)
-    var filename = `${new Date()}.png`
-    var image = await canvas.toDataURL()
-    await FileSaver.saveAs(image, filename)
-    console.log(image)
+    html2canvas(node, {letterRendering: 1, allowTaint :false, useCORS:true, logging:true}).then(function(canvas) {
+      var image = canvas.toDataURL("image/png")
+      console.log(image)
+      saveAs(image)
+    })
   }
 
   componentDidUpdate(prevProps) {
